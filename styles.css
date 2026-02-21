@@ -1,8 +1,15 @@
+/* The Basics */
 body {
     background-color: #ade5d8;
     font-family: "Bree Serif", serif;
 }
 
+h1 {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Banner/Navigation Bar Styling */
 .bg-img {
     background-image: url("/images/catcafe-catbanner.jpg");
     min-height: 450px;
@@ -20,25 +27,35 @@ body {
     margin: 0;
 }
 
-/* The navbar */
 .top-nav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.8);
-    padding: 10px 0;
+    border: black 2px solid;
 }
 
-/* Navbar links */
 .top-nav a {
-    float: left;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 20px 30px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 20px;
 }
 
 .top-nav a:hover {
-    background-color: #ddd;
+    background-color: white;
     color: black;
+}
+
+.nav-logo {
+    position: absolute;
+    left: 30px;
+}
+
+.nav-logo img {
+    height: 65px;
 }

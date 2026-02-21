@@ -8,12 +8,13 @@ body {
 h1 {
     text-align: center;
     font-weight: bold;
-    margin: 5px;
+    margin: 20px;
 }
 
-/* Banner/Navigation Bar Styling */
+/* Banner/Navigation Bar Styling (Laptop/Desktop)*/
 .bg-img {
     background-image: url("/images/catcafe-catbanner.jpg");
+    border: black solid 1px;
     min-height: 450px;
     background-position: center;
     background-repeat: no-repeat;
@@ -37,7 +38,7 @@ h1 {
     overflow: hidden;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.8);
-    border: black 2px solid;
+    box-shadow: black 0 5px 10px;
 }
 
 .nav-links {
@@ -48,9 +49,9 @@ h1 {
 .top-nav a {
     color: white;
     text-align: center;
-    padding: 20px 30px;
+    padding: 30px 30px;
     text-decoration: none;
-    font-size: 22px;
+    font-size: clamp(16px, 2vw, 24px);
 }
 
 .top-nav a:hover {
@@ -59,11 +60,39 @@ h1 {
 }
 
 .nav-logo {
-    left: 0;
     padding-left: 30px;
 }
 
 .nav-logo img {
-    height: 70px;
+    height: clamp(50px, 8vw, 90px);
     max-width: 100%;
+}
+
+/* Banner/Navigation Bar Styling (Mobile/Smaller Screens) */
+@media (max-width: 900px) {
+
+    .top-nav {
+        grid-template-columns: 1fr;   /* One column instead of 3 */
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .nav-logo {
+        padding-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .nav-logo img {
+        height: 60px;   /* Smaller logo */
+    }
+
+    .nav-links {
+        flex-direction: column;   /* Stack links vertically */
+        align-items: center;
+    }
+
+    .top-nav a {
+        padding: 15px;
+        font-size: 18px;
+    }
 }

@@ -1,7 +1,7 @@
 /* The Basics */
 body {
     margin: 0;
-    background-color: #ade5d8;
+    background-color: #98DECE;
     font-family: "Bree Serif", serif;
 }
 
@@ -125,7 +125,8 @@ p {
 .container-fluid {
     background-color: #F2F1E5;
     border: solid 1px black;
-    margin-top: 20px;
+    margin-top: 30px;
+    padding-bottom: 30px;
 }
 
 /* Info Box Styling*/
@@ -152,5 +153,31 @@ p {
 .btn-dark {
     background-color: black;
     font-size: 20px;
+}
+
+/* Event Box Styling*/
+.container #events {
+    background-color: #C1EBE2;
+    border: solid 2px black;
+    max-height: 500px;
+}
+
+.col-sm-4 {
+    max-height:250px;
+    width: 100%;
+}
+
+.col-sm-8 {
+    max-height: 250px;
+    overflow-y: scroll;
+    width:100%;
+}
+
+.col-sm-8 h2 {
+    text-align: left;
+}
+
+.col-sm-8 p {
+    text-align: left;
 }
 

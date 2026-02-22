@@ -15,15 +15,7 @@ h1 {
 .sec-desc {
     font-size: 20px;
     text-align: center;
-}
-
-.container {
-    max-width: 75% !important;
-}
-
-.container-fluid {
-    background-color: #F2F1E5;
-    border: solid 2px black;
+    margin-bottom: 20px;
 }
 
 /* Banner/Navigation Bar Styling (Laptop/Desktop)*/
@@ -112,3 +104,22 @@ h1 {
         font-size: 18px;
     }
 }
+
+/* Editing Bootstrap Containers to Match Page Design Concept*/
+.container {
+    max-width: 75% !important;
+}
+
+.container-fluid {
+    background-color: #F2F1E5;
+    border: solid 1px black;
+    margin-top: 20px;
+}
+
+/* Info Box Styling*/
+.off-white-box {
+    background-color: #F2F1E5;
+    border: solid 2px black;
+    padding: 20px;
+}
+

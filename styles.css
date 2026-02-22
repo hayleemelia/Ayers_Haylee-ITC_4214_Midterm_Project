@@ -8,7 +8,22 @@ body {
 h1 {
     text-align: center;
     font-weight: bold;
-    margin: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.sec-desc {
+    font-size: 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 75% !important;
+}
+
+.container-fluid {
+    background-color: #F2F1E5;
+    border: solid 2px black;
 }
 
 /* Banner/Navigation Bar Styling (Laptop/Desktop)*/
@@ -23,21 +38,22 @@ h1 {
 }
 
 .nav-container {
-    position: absolute;
-    bottom: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin-top: -40px;
     left: 0;
     width: 100%;
-    margin: 0;
 }
 
 .top-nav {
-    position: relative;
+
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     overflow: hidden;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: black;
     box-shadow: black 0 5px 10px;
 }
 
@@ -83,11 +99,11 @@ h1 {
     }
 
     .nav-logo img {
-        height: 60px;   /* Smaller logo */
+        height: 60px;
     }
 
     .nav-links {
-        flex-direction: column;   /* Stack links vertically */
+        flex-direction: column;
         align-items: center;
     }
 

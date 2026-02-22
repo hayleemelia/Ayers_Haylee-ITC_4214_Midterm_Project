@@ -7,6 +7,7 @@ body {
 
 h1 {
     text-align: center;
+    font-size: 40px;
     font-weight: bold;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -39,7 +40,6 @@ h1 {
 }
 
 .top-nav {
-
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
@@ -121,5 +121,11 @@ h1 {
     background-color: #F2F1E5;
     border: solid 2px black;
     padding: 20px;
+}
+
+.box-heading {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
 }
 

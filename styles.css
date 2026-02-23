@@ -190,3 +190,23 @@ p {
     border: solid 1px black;
 }
 
+/* Support Info Box Styling*/
+
+.info-box-img2 {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.info-box-img2 img {
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.reviews {
+    margin-top: 10px;
+}
+
+

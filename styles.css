@@ -122,11 +122,16 @@ p {
     max-width: 75% !important;
 }
 
-.container-fluid {
+.section {
     background-color: #F2F1E5;
     border: solid 1px black;
     margin-top: 30px;
     padding-bottom: 30px;
+}
+
+.footer {
+    background-color: black;
+    margin-top: 30px;
 }
 
 /* Info Box Styling*/
@@ -191,7 +196,6 @@ p {
 }
 
 /* Support Info Box Styling*/
-
 .info-box-img2 {
     display: flex;
     justify-content: center;
@@ -205,8 +209,23 @@ p {
     object-fit: cover;
 }
 
+.media-img {
+    margin: 15px auto 0 auto;
+    height: 150px;
+    width: 90%;
+}
+
+.media-img img {
+    height: 100%;
+    width: 100%;
+    border: solid 1px black;
+}
+
 .reviews {
     margin-top: 10px;
+    max-height: 500px;
+    width: 100%;
+    overflow-x: scroll;
 }
 
 

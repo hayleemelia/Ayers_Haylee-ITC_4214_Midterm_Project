@@ -133,7 +133,7 @@ p {
     background-color: rgba(0, 0, 0, 0.9);
     margin-top: 30px;
     padding: 20px;
-    height: 350px;
+    height: 100%;
     overflow-y: scroll;
 }
 
@@ -244,20 +244,19 @@ p {
 
 .footer-text p {
     color: white;
-    font-size: 16px;
+    font-size: clamp(10px, 1.5vw, 16px);
     text-align: right;
-    margin-top: 100px;
+    margin-top: 25%;
 }
 
 .footer-links {
-    padding: 30px;
+    padding: 10%;
 }
 
 .footer-links a {
     color: white;
-    font-size: 20px;
+    font-size: clamp(14px, 2vw, 20px);
     text-align: left;
-    font-weight: bold;
     text-decoration: underline;
     margin-bottom: 5%;
 }
@@ -266,15 +265,24 @@ p {
     color: #98DECE;
 }
 
-.social-icons a {
+.social-icons {
     display: flex;
+    flex-wrap: wrap;
     justify-content: right;
+    gap: 15px;
+}
+.social-icons a {
     margin: 0;
     color: white;
 }
 
 .social-icons a:hover {
     color: #98DECE;
+}
+
+.social-icons svg {
+    width: clamp(14px, 3vw, 30px);
+    height: clamp(14px, 3vw, 30px);
 }
 
 

@@ -134,6 +134,7 @@ p {
     margin-top: 30px;
     padding: 20px;
     height: 350px;
+    overflow-y: scroll;
 }
 
 /* Info Box Styling*/
@@ -232,7 +233,7 @@ p {
 
 /* Footer Section Styling*/
 .footer-logo {
-    height: 300px;
+    max-height: 300px;
     width: 90%;
 }
 
@@ -245,6 +246,7 @@ p {
     color: white;
     font-size: 16px;
     text-align: right;
+    margin-top: 100px;
 }
 
 .footer-links {
@@ -257,15 +259,22 @@ p {
     text-align: left;
     font-weight: bold;
     text-decoration: underline;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 
 .footer-links a:hover {
     color: #98DECE;
 }
 
-.social-icons {
+.social-icons a {
+    display: flex;
+    justify-content: right;
+    margin: 0;
+    color: white;
+}
 
+.social-icons a:hover {
+    color: #98DECE;
 }
 
 

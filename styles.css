@@ -130,8 +130,10 @@ p {
 }
 
 .footer {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.9);
     margin-top: 30px;
+    padding: 20px;
+    height: 350px;
 }
 
 /* Info Box Styling*/
@@ -222,10 +224,48 @@ p {
 }
 
 .reviews {
-    margin-top: 10px;
+    margin-top: 20px;
     max-height: 500px;
     width: 100%;
     overflow-x: scroll;
+}
+
+/* Footer Section Styling*/
+.footer-logo {
+    height: 300px;
+    width: 90%;
+}
+
+.footer-logo img {
+    height: 100%;
+    width: 100%;
+}
+
+.footer-text p {
+    color: white;
+    font-size: 16px;
+    text-align: right;
+}
+
+.footer-links {
+    padding: 30px;
+}
+
+.footer-links a {
+    color: white;
+    font-size: 20px;
+    text-align: left;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 10%;
+}
+
+.footer-links a:hover {
+    color: #98DECE;
+}
+
+.social-icons {
+
 }
 
 

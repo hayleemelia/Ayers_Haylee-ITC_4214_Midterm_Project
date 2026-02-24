@@ -290,7 +290,6 @@ p {
 }
 
 /* About Cafe Section Styling*/
-
 .about-info {
     max-width: 85% !important;
 }
@@ -328,17 +327,16 @@ p {
     text-align: left;
 }
 
-/*
-.about-img {
-    height: 525px;
-    display: flex;
-    justify-content: center;
+/*Meet the Cats Section Styling */
+.cat-card-container {
+    max-width: 85% !important;
+    max-height: 500px;
+    overflow-y: scroll;
 }
 
-.about-img img {
-    max-height: 100%;
-    max-width: 100%;
-    border: solid 1px black;
-} */
-
+.cat-card {
+    background-color: #C1EBE2;
+    height: 200px;
+    margin: 0 20px 20px 20px;
+}
 

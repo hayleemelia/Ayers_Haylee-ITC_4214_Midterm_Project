@@ -339,5 +339,18 @@ p {
     height: 300px;
     margin: 0 20px 20px 20px;
     border: solid 2px black;
+    padding: 20px;
+}
+
+.cc-image {
+    height: 220px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.cc-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border: solid 1px black;
 }
 

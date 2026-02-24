@@ -129,14 +129,6 @@ p {
     padding-bottom: 30px;
 }
 
-.footer {
-    background-color: rgba(0, 0, 0, 0.9);
-    margin-top: 30px;
-    padding: 20px;
-    height: 100%;
-    overflow-y: scroll;
-}
-
 /* Info Box Styling*/
 .info-box-home {
     background-color: #F2F1E5;
@@ -236,6 +228,14 @@ p {
 }
 
 /* Footer Section Styling*/
+.footer {
+    background-color: rgba(0, 0, 0, 0.9);
+    margin-top: 30px;
+    padding: 20px;
+    height: 100%;
+    overflow-y: scroll;
+}
+
 .footer-logo {
     max-height: 300px;
     width: 90%;
@@ -299,6 +299,7 @@ p {
     height: 600px;
     overflow: hidden;
     margin-right: 5px;
+    margin-bottom: 10px;
     padding: 0;
 }
 
@@ -337,6 +338,7 @@ p {
 .cat-card {
     background-color: #C1EBE2;
     height: 300px;
+    width: 90%;
     margin: 0 20px 20px 20px;
     border: solid 2px black;
     padding: 20px;
@@ -354,3 +356,15 @@ p {
     border: solid 1px black;
 }
 
+/*Adopted Club Section Styling */
+
+.adopted-container {
+    max-width: 75% !important;
+}
+
+.info-box-adopted {
+    background-color: #F2F1E5;
+    border: solid 2px black;
+    height: 500px;
+
+}

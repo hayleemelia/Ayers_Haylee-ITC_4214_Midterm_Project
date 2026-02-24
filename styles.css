@@ -138,7 +138,7 @@ p {
 }
 
 /* Info Box Styling*/
-.off-white-box-m {
+.info-box-home {
     background-color: #F2F1E5;
     border: solid 2px black;
     padding: 20px 40px;
@@ -291,7 +291,7 @@ p {
 
 /* About Cafe Section Styling*/
 
-.off-white-box-s {
+.info-box-about {
     background-color: #F2F1E5;
     border: solid 2px black;
     padding: 20px 40px;

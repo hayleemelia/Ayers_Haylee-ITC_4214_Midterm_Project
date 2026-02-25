@@ -357,7 +357,6 @@ p {
 }
 
 /*Adopted Club Section Styling */
-
 .adopted-container {
     max-width: 75% !important;
 }
@@ -366,5 +365,24 @@ p {
     background-color: #F2F1E5;
     border: solid 2px black;
     height: 500px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.info-box-adopted .carousel {
+    width: 100%;
+    height: 100%;
+    border: solid 1px black;
+}
+
+.carousel-inner, .carousel-item {
+    height: 100%;
+}
+
+.adopted-carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

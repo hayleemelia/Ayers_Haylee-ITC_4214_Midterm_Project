@@ -390,3 +390,46 @@ p {
     height: 100%;
     object-fit: cover;
 }
+
+/*Rules Section Styling*/
+.rules-info {
+    max-width: 80% !important;
+}
+
+.rules-img {
+    height: 200px;
+    width: 85%;
+    overflow: hidden;
+}
+
+.rules-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: solid 1px black;
+}
+
+.rules-text {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.light-blue-box2 {
+    background-color: #C1EBE2;
+    border: solid 2px black;
+    height: 400px;
+    margin: 10px;
+    padding: 20px;
+}
+
+.light-blue-box2 h2 {
+    text-align: left;
+    background-color: #C1EBE2;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.light-blue-box2 p {
+    text-align: left;
+}

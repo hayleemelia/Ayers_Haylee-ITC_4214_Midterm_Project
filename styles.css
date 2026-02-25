@@ -79,6 +79,10 @@ p {
     color: black;
 }
 
+.top-nav a.active {
+    color: #98DECE;
+}
+
 .nav-logo {
     padding-left: 30px;
 }

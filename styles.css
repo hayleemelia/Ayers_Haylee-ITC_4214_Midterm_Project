@@ -96,7 +96,7 @@ p {
 @media (max-width: 900px) {
 
     .top-nav {
-        grid-template-columns: 1fr;   /* One column instead of 3 */
+        grid-template-columns: 1fr;
         text-align: center;
         padding: 15px 0;
     }
@@ -393,12 +393,12 @@ p {
 
 /*Rules Section Styling*/
 .rules-info {
-    max-width: 80% !important;
+    max-width: 85%;
 }
 
 .rules-img {
-    height: 200px;
-    width: 85%;
+    height: 355px;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -418,7 +418,6 @@ p {
     background-color: #C1EBE2;
     border: solid 2px black;
     height: 400px;
-    margin: 10px;
     padding: 20px;
 }
 
@@ -433,3 +432,35 @@ p {
 .light-blue-box2 p {
     text-align: left;
 }
+
+.light-blue-box-sm {
+    background-color: #C1EBE2;
+    border: solid 2px black;
+    height: 150px;
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.extra-info-text {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.extra-info-text h2 {
+    top: 0;
+    position: sticky;
+    z-index: 10;
+    background-color: #C1EBE2;
+}
+/*
+@media (max-width: 800px) {
+    .rules-info {
+        width: 100%;
+    }
+
+    .light-blue-box2 {
+        width: 100%;
+    }
+}
+ */

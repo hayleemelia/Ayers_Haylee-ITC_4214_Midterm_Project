@@ -294,9 +294,6 @@ p {
 }
 
 /* About Cafe Section Styling*/
-.about-info {
-    max-width: 85% !important;
-}
 .info-box-about-lg {
     background-color: #F2F1E5;
     border: solid 2px black;
@@ -392,9 +389,6 @@ p {
 }
 
 /*Rules Section Styling*/
-.rules-info {
-    max-width: 85%;
-}
 
 .rules-img {
     height: 355px;
@@ -453,23 +447,8 @@ p {
     z-index: 10;
     background-color: #C1EBE2;
 }
-/*
-@media (max-width: 800px) {
-    .rules-info {
-        width: 100%;
-    }
-
-    .light-blue-box2 {
-        width: 100%;
-    }
-}
- */
 
 /*Menu Section Styling*/
-.menu-container {
-    max-width: 80%;
-}
-
 .menu-box {
     background-color: #F2F1E5;
     border: solid 2px black;

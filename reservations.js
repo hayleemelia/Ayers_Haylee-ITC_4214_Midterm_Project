@@ -201,3 +201,45 @@ renderTable();
 
 sortSelect.addEventListener("change", renderTable);
 filterSelect.addEventListener("change", renderTable);
+
+document.addEventListener("DOMContentLoaded", () => {
+    function updateAnalytics() {
+        const completedCount = reservations.filter(r => r.status === "Completed").length;
+        const pendingCount = reservations.filter(r => r.status === "Pending").length;
+        const totalCount = reservations.length;
+
+        document.querySelector("#totalReservations").textContent = totalCount;
+        document.querySelector("#completedReservations").textContent = completedCount;
+        document.querySelector("#pendingReservations").textContent = pendingCount;
+
+        const ctx = document.querySelector("#reservationChart").getContext("2d");
+
+        // Destroy previous chart if it exists
+        if (window.reservationChartInstance) {
+            window.reservationChartInstance.destroy();
+        }
+
+        window.reservationChartInstance = new Chart(ctx, {
+            type: "bar",
+            data: {
+                labels: ["Pending", "Completed"],
+                datasets: [{
+                    label: "Reservations",
+                    data: [pendingCount, completedCount],
+                    backgroundColor: ["#f39c12", "#2ecc71"]
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: { legend: { display: false } },
+                scales: { y: { beginAtZero: true, stepSize: 1 } }
+            }
+        });
+    }
+
+    // Call once to render the initial chart
+    updateAnalytics();
+
+    // Call this again whenever reservations are added, edited, or deleted
+    window.updateAnalytics = updateAnalytics;
+});

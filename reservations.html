@@ -22,6 +22,7 @@
 
     <!-- Javascript Scripts -->
     <script src="reservations.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
 </head>
 <body>
     <!-- Banner image & navbar -->
@@ -105,6 +106,15 @@
                 </div>
                 <div class="col-md res-box">
                     <h2>Analytics</h2>
+                    <!-- Bar Chart -->
+                    <canvas id="reservationChart"></canvas>
+
+                    <!-- Summary Section -->
+                    <div class="analytics-summary mt-3">
+                        <p>Total Reservations: <span id="totalReservations">0</span></p>
+                        <p>Completed Reservations: <span id="completedReservations">0</span></p>
+                        <p>Pending Reservations: <span id="pendingReservations">0</span></p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -147,11 +157,7 @@
                 <tbody class="reservation-table-body"></tbody>
             </table>
         </div>
-            <!-- (1.3) Reservation Summary Info-->
-
-            <!-- (1.4) Reservation Analytics-->
-
-        </div>
+    </div>
 
     <!-- (2.0) Cafe Rules Section Header -->
     <div class="container-fluid section">

@@ -123,7 +123,7 @@ p {
 
 /* Editing Bootstrap Containers to Match Page Design Concept*/
 .container {
-    width: 75%;
+    width: 80%;
 }
 
 @media (max-width: 900px) {
@@ -364,10 +364,6 @@ p {
 }
 
 /*Adopted Club Section Styling */
-.adopted-container {
-    max-width: 75% !important;
-}
-
 .info-box-adopted {
     background-color: #F2F1E5;
     border: solid 2px black;
@@ -413,6 +409,19 @@ p {
 }
 .res-table {
     border: solid 2px black;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.name-overflow {
+    max-width: 150px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.small-col {
+    width: 13%;
 }
 
 .res-box {
@@ -425,19 +434,15 @@ p {
 }
 
 .form-text {
-    text-align: left;
+    text-align: right;
     color: black;
     font-size: 16px;
     font-weight: bold;
 }
 
-.name-scroll {
-    max-width: 150px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+.name-input, .email-input, .people-input, .date-input, .time-select {
+    border: 1px solid black;
 }
-
 .btn-primary {
     background-color: black;
     border: solid 1px black;
@@ -519,4 +524,14 @@ p {
 
 .menu-box h2 {
     text-align: left;
+}
+
+/*Get in Touch Section Styling*/
+.contact-box {
+    background-color: #F2F1E5;
+    border: solid 2px black;
+    padding: 20px 40px;
+    margin-bottom: 20px;
+    max-height: 400px;
+    overflow-y: scroll;
 }

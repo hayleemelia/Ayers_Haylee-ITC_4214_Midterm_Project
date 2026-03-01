@@ -80,10 +80,10 @@ function renderTable() {
         let row = document.createElement("tr");
 
         row.innerHTML = `
-            <td><div class="name-scroll">${reservation.name}</div></td>
-            <td>${reservation.people}</td>
+            <td><div class="name-overflow">${reservation.name}</div></td>
+            <td class="small-col">${reservation.people}</td>
             <td>${reservation.date}</td>
-            <td>${reservation.time}</td>
+            <td class="small-col">${reservation.time}</td>
             <td>${reservation.status}</td>
             <td>
                 <button class="edit-btn btn btn-sm btn-primary">Edit</button>

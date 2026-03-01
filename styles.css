@@ -568,3 +568,38 @@ p {
     margin-bottom: 5px;
     font-weight: bold;
 }
+
+/*Visit Section Styling*/
+.visit-api-box {
+    background-color: #C1EBE2;
+    border: solid 2px black;
+    height: 550px;
+    padding: 20px;
+}
+
+.cafe-hours-box {
+    background-color: #C1EBE2;
+    border: solid 2px black;
+    height: 125px;
+    padding: 15px;
+    overflow-y: scroll;
+}
+
+/*Social Media Section Styling*/
+.social-media-box {
+    background-color: #F2F1E5;
+    border: solid 2px black;
+    height: 160px;
+    padding: 20px;
+}
+
+.social-media-box svg {
+    color: black;
+    height: 50px;
+    width: 50px;
+    margin: 10px 0;
+}
+
+.social-media-box svg:hover {
+    color: #98DECE;
+}

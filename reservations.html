@@ -61,7 +61,7 @@
                             <p class="form-text">Name:</p>
                         </div>
                         <div class="col">
-                            <input type="text" class="name-input" placeholder="Full Name" required>
+                            <input type="text" class="name-input" placeholder="Full Name" maxlength="50" required>
                         </div>
                     </div>
                     <div class="row">
@@ -69,7 +69,7 @@
                             <p class="form-text">Email:</p>
                         </div>
                         <div class="col">
-                            <input type="email" class="email-input" placeholder="Email Address" required>
+                            <input type="email" class="email-input" placeholder="Email Address" maxlength="50" required>
                         </div>
                     </div>
                     <div class="row">
@@ -113,7 +113,27 @@
         <div class="container res-container">
             <h2>Current Bookings</h2>
             <p>Note: To change or cancel any bookings, you will need to verify your email address first.</p>
-            <table class="table res-table">
+            <div class="table-controls">
+                <label>
+                    Sort By:
+                    <select class="sort-select">
+                        <option value="none">None</option>
+                        <option value="name">Name (A–Z)</option>
+                        <option value="date">Date (Soonest First)</option>
+                    </select>
+                </label>
+
+                <label>
+                    Filter By Status:
+                    <select class="filter-select">
+                        <option value="all">All</option>
+                        <option value="Pending">Pending</option>
+                        <option value="Completed">Completed</option>
+                    </select>
+                </label>
+            </div>
+
+            <table class="table res-table mx-auto">
                 <thead class="table-dark">
                 <tr>
                     <th>Name</th>
@@ -156,7 +176,7 @@
 
                 <!-- (2.2) Second Cafe Rules Boxes-->
                 <div class="row gap-3">
-                    <div class="col-md p-0">
+                    <div class="col p-0">
                         <div class="light-blue-box-sm">
                             <div class="extra-info-text">
                                 <h2>Additional Info</h2>
@@ -164,7 +184,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md p-0">
+                    <div class="col p-0">
                         <div class="light-blue-box-sm">
                             <div class="extra-info-text">
                                 <h2>Any Questions?</h2>

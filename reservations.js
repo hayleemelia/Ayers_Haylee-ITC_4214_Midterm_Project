@@ -6,6 +6,9 @@ const form = document.querySelector(".reservation-form");
 const tableBody = document.querySelector(".reservation-table-body");
 const timeSelect = document.querySelector(".time-select");
 const dateInput = document.querySelector(".date-input");
+const sortSelect = document.querySelector(".sort-select");
+const filterSelect = document.querySelector(".filter-select");
+
 
 // ----------------------------
 // Generate time slots
@@ -48,12 +51,36 @@ function saveReservations() {
 function renderTable() {
     tableBody.innerHTML = "";
 
-    reservations.forEach((reservation, index) => {
+    let displayedReservations = [...reservations];
 
+    // ----------------------------
+    // FILTERING
+    // ----------------------------
+    if (filterSelect && filterSelect.value !== "all") {
+        displayedReservations = displayedReservations.filter(res =>
+            res.status === filterSelect.value
+        );
+    }
+
+    // ----------------------------
+    // SORTING
+    // ----------------------------
+    if (sortSelect) {
+        if (sortSelect.value === "name") {
+            displayedReservations.sort((a, b) => a.name.localeCompare(b.name));
+        } else if (sortSelect.value === "date") {
+            displayedReservations.sort((a, b) => new Date(a.date) - new Date(b.date));
+        }
+    }
+
+    // ----------------------------
+    // RENDERING ROWS
+    // ----------------------------
+    displayedReservations.forEach((reservation, index) => {
         let row = document.createElement("tr");
 
         row.innerHTML = `
-            <td>${reservation.name}</td>
+            <td><div class="name-scroll">${reservation.name}</div></td>
             <td>${reservation.people}</td>
             <td>${reservation.date}</td>
             <td>${reservation.time}</td>
@@ -68,7 +95,6 @@ function renderTable() {
         // Edit Button
         // ----------------------------
         row.querySelector(".edit-btn").addEventListener("click", () => {
-
             const emailVerify = prompt("Enter your email to edit this reservation:");
             if (emailVerify !== reservation.email) {
                 alert("Email does not match this booking.");
@@ -76,13 +102,13 @@ function renderTable() {
             }
 
             row.innerHTML = `
-                <td><input type="text" value="${reservation.name}" class="edit-name"></td>
-                <td><input type="number" value="${reservation.people}" class="edit-people"></td>
-                <td><input type="date" value="${reservation.date}" class="edit-date"></td>
-                <td><input type="time" value="${reservation.time}" class="edit-time"></td>
+                <td><input type="text" value="${reservation.name}" class="edit-name form-control"></td>
+                <td><input type="number" value="${reservation.people}" class="edit-people form-control"></td>
+                <td><input type="date" value="${reservation.date}" class="edit-date form-control"></td>
+                <td><input type="time" value="${reservation.time}" class="edit-time form-control"></td>
                 <td>
                     <label>
-                        <input type="checkbox" class="edit-status">
+                        <input type="checkbox" class="edit-status" ${reservation.status === "Completed" ? "checked" : ""}>
                         Completed
                     </label>
                 </td>
@@ -92,28 +118,22 @@ function renderTable() {
                 </td>
             `;
 
-            // ----------------------------
             // Save Button
-            // ----------------------------
             row.querySelector(".save-btn").addEventListener("click", () => {
-
                 reservation.name = row.querySelector(".edit-name").value;
                 reservation.people = row.querySelector(".edit-people").value;
                 reservation.date = row.querySelector(".edit-date").value;
                 reservation.time = row.querySelector(".edit-time").value;
-
-                const checked = row.querySelector(".edit-status").checked;
-                reservation.status = checked ? "Completed" : "Pending";
+                reservation.status = row.querySelector(".edit-status").checked ? "Completed" : "Pending";
 
                 saveReservations();
                 renderTable();
             });
 
-            // Delete still available in edit mode
+            // Delete Button inside edit mode
             row.querySelector(".delete-btn").addEventListener("click", () => {
                 deleteReservation(index, reservation);
             });
-
         });
 
         // ----------------------------
@@ -126,6 +146,7 @@ function renderTable() {
         tableBody.appendChild(row);
     });
 }
+
 
 // ----------------------------
 // Delete Function
@@ -177,3 +198,6 @@ form.addEventListener("submit", function (e) {
 });
 
 renderTable();
+
+sortSelect.addEventListener("change", renderTable);
+filterSelect.addEventListener("change", renderTable);

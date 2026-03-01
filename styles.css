@@ -34,7 +34,7 @@ p {
 .form-text {
     text-align: right;
     color: black;
-    font-size: 18px;
+    font-size: 17px;
     font-weight: bold;
 }
 
@@ -56,7 +56,7 @@ p {
 
 .text-field {
     width: 250px;
-    height: 125px;
+    height: 140px;
 }
 
 .btn-primary {
@@ -67,7 +67,7 @@ p {
 .btn-dark {
     background-color: black;
     font-size: 20px;
-    margin: 20px;
+    margin: 10px;
 }
 
 /* Banner/Navigation Bar Styling (Laptop/Desktop)*/
@@ -563,4 +563,9 @@ p {
     margin-bottom: 20px;
     max-height: 190px;
     overflow-y: scroll;
+}
+
+.contact-text {
+    margin-bottom: 5px;
+    font-weight: bold;
 }

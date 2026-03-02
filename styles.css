@@ -181,7 +181,7 @@ p {
 .info-box-home {
     background-color: #F2F1E5;
     border: solid 2px black;
-    padding: 20px 40px;
+    padding: 20px;
     height: 450px;
     overflow-y: scroll;
 }
@@ -602,4 +602,43 @@ p {
 
 .social-media-box svg:hover {
     color: #98DECE;
+}
+
+/*Make Donation Section Styling */
+.donation-bar-box {
+    background-color: #F2F1E5;
+    border: solid 2px black;
+    height: 150px;
+    padding: 20px 30px;
+}
+
+.d-progress {
+    border: solid 1px black;
+    height: 30px;
+}
+
+.donations-bar {
+    width: 30%;
+    background-color: #CE98DE;
+    color: black;
+}
+
+.donations-box {
+    background-color: #F2F1E5;
+    border: solid 2px black;
+    height: 400px;
+    padding: 20px;
+    overflow-y: scroll;
+}
+
+.donation-img {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.donation-img img {
+    height: 100%;
+    width: 100%;
 }

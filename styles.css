@@ -626,23 +626,34 @@ p {
 .donations-box {
     background-color: #F2F1E5;
     border: solid 2px black;
-    height: 400px;
+    height: 350px;
     padding: 20px;
-    overflow-y: scroll;
+    overflow-y: auto;
+    box-sizing: border-box;
 }
 
-.donation-img {
-    display: flex;
-    justify-content: center;
+.donations-img-box {
+    background-color: #F2F1E5;
+    border: solid 2px black;
+    height: 350px;
+    padding: 0;
     overflow: hidden;
-    margin-bottom: 10px;
 }
 
-.donation-img img {
-    height: 100%;
+.donation-img-box img {
+    object-fit: cover;
+    display: block;
+}
+
+.donation-accordion {
+    max-width: 400px;
+}
+
+.donation-question {
     width: 100%;
+    background-color: #C1EBE2;
+    border: solid 2px black;
 }
-
 /*Franchise Section Styling */
 .construction-img {
     max-height: 400px;

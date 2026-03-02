@@ -19,6 +19,9 @@
 
     <!-- Bootstrap configuration -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous" defer></script>
+
+    <!-- Javascript Scripts -->
+    <script src="catfact.js" defer></script>
 </head>
 <body>
     <!-- Banner image & navbar -->
@@ -179,8 +182,18 @@
     <!-- (3.0) Cat Facts API Section Header -->
     <div class="container">
         <h1>Cat Facts (Misc.)</h1>
-        <p class="sec-desc">Think you know a lot about cats? Check out our cat facts below and see how smart you really are!</p>
-
+        <p class="sec-desc">Think you know a lot about cats? Check out our cat facts below and see how much you really know!</p>
+        <div class="container">
+            <div class="cat-fact-box">
+                <h2>Random Cat Fact:</h2>
+                <p id="cat-fact">Loading a fun cat fact...</p>
+                <div class="text-center">
+                    <button class="btn btn-dark" onclick="getCatFact()">
+                        Get Another Fact
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- (4.0) Footer Section-->

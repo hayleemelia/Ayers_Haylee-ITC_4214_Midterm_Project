@@ -642,3 +642,16 @@ p {
     height: 100%;
     width: 100%;
 }
+
+/*Franchise Section Styling */
+.construction-img {
+    max-height: 400px;
+    width: 100%;
+}
+
+.construction-img img {
+    max-height: 400px;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}

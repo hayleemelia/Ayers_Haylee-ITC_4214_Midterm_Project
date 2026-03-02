@@ -44,7 +44,7 @@
     <!-- (1.0) Make a Donation Section Header -->
     <div class="container">
         <h1>Make a Donation</h1>
-        <p class="sec-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel urna metus. Praesent fermentum accumsan velit, vitae condimentum dui.</p>
+        <p class="sec-desc">Here at our cat cafe, we rely partially on donations to help take care of both our cats' needs and to help other cats in need as well. Please consider donating today!</p>
         <div class="container">
             <!-- (1.1) Donation Goal Progress Bar -->
             <div class="row mb-3 donation-bar-box">
@@ -130,12 +130,35 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- (1.2.4) Membership Button and Donate Modal -->
+                        <div class="d-flex justify-content-center gap-3">
+                            <a href="https://catcafeworkshop.myshopify.com/products/1cat-cafe-athens-vip-member?utm_source=copyToPasteBoard&utm_medium=product-links&utm_content=web" type="button" class="btn btn-dark" target="_blank">VIP Membership</a>
+                            <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#donate-modal">Donate Now!</button>
+
+                            <!-- (1.2.4.1) Modal Configuration -->
+                            <div class="modal" id="donate-modal">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Payment Processing Screen</h4>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Our payment processing mechanism is currently having issues. Please come back later and try again!
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         </div>
                     </div>
                 <!-- (1.3) Donation Product Images -->
                 <div class="col-5 p-0 ps-2">
                     <div class="donations-img-box">
-                        <img class="img-fluid" src="/images/catcafe-cat4.jpg" alt="Photograph of a cat at the cat cafe.">
+                        <img class="img-fluid" src="https://www.noupou.gr/wp-content/uploads/2023/11/cat-cafe-7.jpg" alt="Photograph of a cat at the cat cafe.">
                     </div>
                 </div>
             </div>
@@ -156,7 +179,7 @@
     <!-- (3.0) Cat Facts API Section Header -->
     <div class="container">
         <h1>Cat Facts (Misc.)</h1>
-        <p class="sec-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel urna metus. Praesent fermentum accumsan velit, vitae condimentum dui.</p>
+        <p class="sec-desc">Think you know a lot about cats? Check out our cat facts below and see how smart you really are!</p>
 
     </div>
 

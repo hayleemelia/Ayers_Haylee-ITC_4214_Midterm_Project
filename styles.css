@@ -641,12 +641,20 @@ p {
 }
 
 .donation-img-box img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     display: block;
 }
 
 .donation-accordion {
     max-width: 400px;
+    margin-bottom: 20px;
+}
+
+.donation-accordion .accordion-button:not(.collapsed) {
+    background-color: black;
+    color: white;
 }
 
 .donation-question {

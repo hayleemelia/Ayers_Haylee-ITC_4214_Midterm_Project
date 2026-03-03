@@ -7,5 +7,6 @@
     <orderEntry type="library" name="bootstrap" level="application" />
     <orderEntry type="library" name="widget" level="application" />
     <orderEntry type="library" name="chart.js" level="application" />
+    <orderEntry type="library" name="jquery-3.7.0" level="application" />
   </component>
 </module>

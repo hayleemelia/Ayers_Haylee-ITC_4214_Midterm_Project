@@ -1,0 +1,90 @@
+/* About Cafe Section Styling*/
+.info-box-about-lg {
+    background-color: #F2F1E5;
+    border: solid 2px black;
+    height: 600px;
+    overflow: hidden;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+.info-box-about-lg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.info-box-about-sm {
+    background-color: #F2F1E5;
+    border: solid 2px black;
+    height: 295px;
+    padding: 20px 40px;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+.info-box-about-sm h2 {
+    text-align: left;
+}
+
+.info-box-about-sm p {
+    text-align: left;
+}
+
+/*Meet the Cats Section Styling */
+.cat-card-container {
+    max-width: 85% !important;
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+.cat-card {
+    background-color: #C1EBE2;
+    height: 300px;
+    width: 90%;
+    margin: 0 20px 20px 20px;
+    border: solid 2px black;
+    padding: 20px;
+}
+
+.cc-image {
+    height: 220px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.cc-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border: solid 1px black;
+}
+
+/*Adopted Club Section Styling */
+.info-box-adopted {
+    background-color: #F2F1E5;
+    border: solid 2px black;
+    height: 500px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-box-adopted .carousel {
+    width: 100%;
+    height: 100%;
+    border: solid 1px black;
+}
+
+.carousel-inner, .carousel-item {
+    height: 100%;
+}
+
+.adopted-carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

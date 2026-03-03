@@ -1,0 +1,81 @@
+/*Make Donation Section Styling */
+.donation-bar-box {
+    background-color: #F2F1E5;
+    border: solid 2px black;
+    height: 150px;
+    padding: 20px 30px;
+}
+
+.d-progress {
+    border: solid 2px black;
+    height: 30px;
+}
+
+.donations-bar {
+    width: 30%;
+    background-color: #CE98DE;
+    color: black;
+}
+
+.donations-box {
+    background-color: #F2F1E5;
+    border: solid 2px black;
+    height: 320px;
+    padding: 20px;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.donations-img-box {
+    background-color: #F2F1E5;
+    border: solid 2px black;
+    height: 320px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.donation-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    display: block;
+}
+
+.donation-accordion {
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+.donation-accordion .accordion-button {
+    background-color: #C1EBE2;
+}
+
+.donation-accordion .accordion-button:not(.collapsed) {
+    background-color: black;
+    color: white;
+}
+
+.donation-question {
+    width: 100%;
+    background-color: #C1EBE2;
+    border: solid 2px black;
+}
+/*Franchise Section Styling */
+.construction-img {
+    max-height: 400px;
+    width: 100%;
+}
+
+.construction-img img {
+    max-height: 400px;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+/*Cat Facts Section Styling*/
+.cat-fact-box {
+    background-color: #F2F1E5;
+    border: solid 2px black;
+    padding: 20px;
+}

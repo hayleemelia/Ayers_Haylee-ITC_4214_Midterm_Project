@@ -34,82 +34,84 @@
     <div id="nav-placeholder"></div>
 
     <!-- (1.0) Make a Reservation Section Header -->
-    <div class="container">
-        <h1>Make a Reservation!</h1>
+    <div class="container" role="region" aria-labelledby="reservation-heading">
+        <h1 id="reservation-heading">Make a Reservation!</h1>
         <p class="sec-desc">Easily book your visit to our Athens cat cafe with our reservation form, track pending and completed bookings, and view all current reservations with their details and status. You can edit or cancel your booking if plans change, making your cat cafe experience flexible and convenient.</p>
 
         <!-- (1.1) Reservation Form-->
         <div class="container">
             <div class="row gap-3">
-                <div class="col-sm res-box">
+                <div class="col-sm res-box" role="region" aria-labelledby="res-form">
                     <h2 id="res-form">Book your Spot!</h2>
                     <p>Fill out the information below to secure your visit with us!</p>
-                    <form class="reservation-form">
-                    <div class="row">
-                        <div class="col">
-                            <p class="form-text">Res. Name:</p>
+                    <form class="reservation-form" aria-label="Reservation Form">
+                        <div class="row">
+                            <div class="col">
+                                <p class="form-text" id="label-name">Res. Name:</p>
+                            </div>
+                            <div class="col">
+                                <label>
+                                    <input type="text" class="name-input" placeholder="Full Name" maxlength="50" required aria-labelledby="label-name">
+                                </label>
+                            </div>
                         </div>
-                        <div class="col">
-                            <label>
-                                <input type="text" class="name-input" placeholder="Full Name" maxlength="50" required>
-                            </label>
+                        <div class="row">
+                            <div class="col">
+                                <p class="form-text" id="label-email">Email Address:</p>
+                            </div>
+                            <div class="col">
+                                <label>
+                                    <input type="email" class="email-input" placeholder="Email Address" maxlength="50" required aria-labelledby="label-email">
+                                </label>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <p class="form-text">Email Address:</p>
+                        <div class="row">
+                            <div class="col">
+                                <p class="form-text" id="label-people">Num. of Guests:</p>
+                            </div>
+                            <div class="col">
+                                <label>
+                                    <input type="number" class="people-input" placeholder="Number of People" min="1" required aria-labelledby="label-people">
+                                </label>
+                            </div>
                         </div>
-                        <div class="col">
-                            <label>
-                                <input type="email" class="email-input" placeholder="Email Address" maxlength="50" required>
-                            </label>
+                        <div class="row">
+                            <div class="col">
+                                <p class="form-text" id="label-date">Choose Day:</p>
+                            </div>
+                            <div class="col">
+                                <label>
+                                    <input type="date" class="date-input" required aria-labelledby="label-date">
+                                </label>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <p class="form-text">Num. of Guests:</p>
+                        <div class="row">
+                            <div class="col">
+                                <p class="form-text" id="label-time">Choose Time:</p>
+                            </div>
+                            <div class="col">
+                                <label>
+                                    <select class="time-select" required aria-labelledby="label-time">
+                                        <option value="">Select Time</option>
+                                    </select>
+                                </label>
+                            </div>
                         </div>
-                        <div class="col">
-                            <label>
-                                <input type="number" class="people-input" placeholder="Number of People" min="1" required>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <p class="form-text">Choose Day:</p>
-                        </div>
-                        <div class="col">
-                            <label>
-                                <input type="date" class="date-input" required>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <p class="form-text">Choose Time:</p>
-                        </div>
-                        <div class="col">
-                            <label>
-                                <select class="time-select" required>
-                                    <option value="">Select Time</option>
-                                </select>
-                            </label>
-                        </div>
-                    </div>
                         <div class="text-center">
-                            <button type="submit" class="btn btn-dark">Submit!</button>
+                            <button type="submit" class="btn btn-dark" aria-label="Submit reservation form">Submit!</button>
                         </div>
                     </form>
                 </div>
+
                 <!-- (1.2) Reservation Analytics -->
-                <div class="col-sm res-box">
-                    <h2>Analytics</h2>
+                <div class="col-sm res-box" role="region" aria-labelledby="analytics-heading">
+                    <h2 id="analytics-heading">Analytics</h2>
+
                     <!-- (1.2.1) Bar Chart -->
-                    <canvas id="reservationChart"></canvas>
+                    <canvas id="reservationChart" role="img" aria-label="Bar chart showing reservation statistics"></canvas>
 
                     <!-- (1.2.2) Summary Section -->
-                    <div class="analytics-summary mt-3">
+                    <div class="analytics-summary mt-3" aria-live="polite">
                         <p>Total Reservations: <span id="totalReservations">0</span></p>
                         <p>Completed Reservations: <span id="completedReservations">0</span></p>
                         <p>Pending Reservations: <span id="pendingReservations">0</span></p>
@@ -119,13 +121,14 @@
         </div>
 
         <!-- (1.3) Reservation Table-->
-        <div class="container res-container">
-            <h2>Current Bookings</h2>
+        <div class="container res-container" role="region" aria-labelledby="current-bookings-heading">
+            <h2 id="current-bookings-heading">Current Bookings</h2>
             <p>Note: To change or cancel any bookings, you will need to verify your email address first.</p>
-            <div class="table-controls">
+
+            <div class="table-controls" role="group" aria-label="Table Controls">
                 <label>
                     Sort By:
-                    <select class="sort-select">
+                    <select class="sort-select" aria-label="Sort reservations">
                         <option value="none">None</option>
                         <option value="name">Name (A–Z)</option>
                         <option value="date">Date (Soonest First)</option>
@@ -134,7 +137,7 @@
 
                 <label>
                     Filter By Status:
-                    <select class="filter-select">
+                    <select class="filter-select" aria-label="Filter reservations by status">
                         <option value="all">All</option>
                         <option value="Pending">Pending</option>
                         <option value="Completed">Completed</option>
@@ -142,18 +145,18 @@
                 </label>
             </div>
 
-            <table class="table res-table mx-auto">
+            <table class="table res-table mx-auto" aria-label="Reservation Table">
                 <thead class="table-dark">
                 <tr>
-                    <th>Name</th>
-                    <th class="small-col">People</th>
-                    <th>Date</th>
-                    <th class="small-col">Time</th>
-                    <th>Status</th>
-                    <th>Actions</th>
+                    <th scope="col">Name</th>
+                    <th scope="col" class="small-col">People</th>
+                    <th scope="col">Date</th>
+                    <th scope="col" class="small-col">Time</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Actions</th>
                 </tr>
                 </thead>
-                <tbody class="reservation-table-body"></tbody>
+                <tbody class="reservation-table-body" aria-live="polite"></tbody>
             </table>
         </div>
     </div>
@@ -169,7 +172,7 @@
                 <div class="row light-blue-box2">
                     <div class="col-4">
                         <div class="rules-img mx-auto">
-                            <img class="img-fluid" src="/images/catcafe-cat4.jpg" alt="Photograph of a cat.">
+                            <img class="img-fluid" src="images/catcafe-cat4.jpg" alt="Photograph of a cat.">
                         </div>
                     </div>
                     <div class="col-8 rules-text">

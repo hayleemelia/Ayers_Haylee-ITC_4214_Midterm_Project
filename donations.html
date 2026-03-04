@@ -168,15 +168,15 @@
     </div>
 
     <!-- (3.0) Cat Facts API Section Header -->
-    <div class="container">
-        <h1>Cat Facts (Misc.)</h1>
+    <div class="container" role="region" aria-labelledby="cat-facts-heading">
+        <h1 id="cat-facts-heading">Cat Facts (Misc.)</h1>
         <p class="sec-desc">Think you know a lot about cats? Check out our cat facts below and see how much you really know!</p>
         <div class="container">
-            <div class="cat-fact-box">
-                <h2>Random Cat Fact:</h2>
-                <p id="cat-fact">Loading a fun cat fact...</p>
+            <div class="cat-fact-box" role="region" aria-labelledby="random-fact-heading">
+                <h2 id="random-fact-heading">Random Cat Fact:</h2>
+                <p id="cat-fact" aria-live="polite">Loading a fun cat fact...</p>
                 <div class="text-center">
-                    <button class="btn btn-dark" onclick="getCatFact()">
+                    <button class="btn btn-dark" onclick="getCatFact()" aria-label="Get another random cat fact">
                         Get Another Fact
                     </button>
                 </div>

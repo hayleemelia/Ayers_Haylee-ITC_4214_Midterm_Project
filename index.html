@@ -29,6 +29,7 @@
 
     <!-- My Javascript Scripts -->
     <script src="load-components.js" defer></script>
+    <script src="latestactivity.js" defer></script>
 </head>
 <body>
     <!-- Banner image & navbar -->
@@ -49,8 +50,15 @@
                             </div>
                             <p>To ensure the safety of our cats and smooth operation of our business, we only allow those with reservations to enter our cafe.
                             Those who are 14+ can make a reservation using the link below. Other rules also apply.</p>
+                            <div class="latest-res-info">
+                                <div class="analytics-summary mt-3">
+                                    <p>Total Reservations: <span id="totalReservations">0</span></p>
+                                    <p>Completed Reservations: <span id="completedReservations">0</span></p>
+                                    <p>Pending Reservations: <span id="pendingReservations">0</span></p>
+                                </div>
+                            </div>
                             <div class="text-center">
-                                <a href="reservations.html" class="btn btn-dark">Book your Spot!</a>
+                                <a href="reservations.html" class="btn btn-dark mt-3">Book your Spot!</a>
                             </div>
                         </div>
                     </div>

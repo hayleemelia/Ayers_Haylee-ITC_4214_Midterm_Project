@@ -33,89 +33,99 @@
     <div id="nav-placeholder"></div>
 
     <!-- (1.0) Get in Touch Section Header -->
-    <div class="container">
-        <h1>Get in Touch!</h1>
+    <div class="container" role="region" aria-labelledby="contact-heading">
+        <h1 id="contact-heading">Get in Touch!</h1>
         <p class="sec-desc">Reach out to us at our Athens cat cafe for questions, reservations, or special events. Fill out our contact form, explore our cafe details, or sign up for our newsletter to stay updated on cozy cat moments and exclusive offers.</p>
+
         <!-- (1.1) Contact Boxes -->
         <div class="container">
             <div class="row gap-3">
-                    <div class="col-md contact-form-box">
-                        <form id="contact-form">
+                <div class="col-md contact-form-box" role="region" aria-labelledby="c-form">
+                    <form id="contact-form" aria-label="Contact Form">
                         <h2 id="c-form">Contact Form</h2>
+
                         <div class="row">
                             <div class="col">
-                                <p class="form-text">Full Name:</p>
+                                <p class="form-text" id="label-full-name">Full Name:</p>
                             </div>
                             <div class="col">
                                 <label>
-                                    <input type="text" class="form-control" id="full-name" placeholder="Enter your full name" maxlength="50" required>
+                                    <input type="text" class="form-control" id="full-name" placeholder="Enter your full name" maxlength="50" required aria-labelledby="label-full-name">
                                 </label>
                             </div>
                         </div>
+
                         <div class="row">
                             <div class="col">
-                                <p class="form-text">Email Address:</p>
+                                <p class="form-text" id="label-email">Email Address:</p>
                             </div>
                             <div class="col">
                                 <label>
-                                    <input type="email" class="form-control" id="email" placeholder="Enter your email" maxlength="50" required>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter your email" maxlength="50" required aria-labelledby="label-email">
                                 </label>
                             </div>
                         </div>
+
                         <div class="row">
                             <div class="col">
-                                <p class="form-text">Phone Number:</p>
+                                <p class="form-text" id="label-phone">Phone Number:</p>
                             </div>
                             <div class="col">
                                 <label>
-                                    <input type="text" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                                    <input type="text" class="form-control" id="phone" placeholder="Enter your phone number" required aria-labelledby="label-phone">
                                 </label>
                             </div>
                         </div>
+
                         <div class="row">
                             <div class="col">
-                                <p class="form-text">Message:</p>
+                                <p class="form-text" id="label-message">Message:</p>
                             </div>
                             <div class="col">
                                 <label>
-                                    <textarea class="form-control text-field" id="message" placeholder="Enter your message" maxlength="1000" required></textarea>
+                                    <textarea class="form-control text-field" id="message" placeholder="Enter your message" maxlength="1000" required aria-labelledby="label-message"></textarea>
                                 </label>
                             </div>
                         </div>
+
                         <div class="text-center">
-                            <button type="submit" class="btn btn-dark mt-2">Send Message</button>
+                            <button type="submit" class="btn btn-dark mt-2" aria-label="Send contact form message">Send Message</button>
                         </div>
-                        </form>
+                    </form>
+                </div>
+
+                <div class="col-md">
+                    <div class="row gap-3">
+                        <div class="col contact-box-sm" role="region" aria-labelledby="reach-out-heading">
+                            <h2 id="reach-out-heading">Reach Out!</h2>
+                            <p>If you want to talk to someone directly, you can use the information below to reach out to us.</p>
+                            <p class="contact-text">Phone Number: +30-2110015504</p>
+                            <p class="contact-text">Email: info@catcafe.gr</p>
+                        </div>
                     </div>
-                    <div class="col-md">
-                        <div class="row gap-3">
-                            <div class="col contact-box-sm">
-                                <h2>Reach Out!</h2>
-                                <p>If you want to talk to someone directly, you can use the information below to reach out to us.</p>
-                                <p class="contact-text">Phone Number: +30-2110015504</p>
-                                <p class="contact-text">Email: info@catcafe.gr</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col contact-box-sm">
-                                <form id="newsletter-form">
-                                <h2>Our Newsletter</h2>
+
+                    <div class="row">
+                        <div class="col contact-box-sm" role="region" aria-labelledby="newsletter-heading">
+                            <form id="newsletter-form" aria-label="Newsletter Subscription Form">
+                                <h2 id="newsletter-heading">Our Newsletter</h2>
                                 <p>If you are interested, you can subscribe to our newsletter by filling out the information below!</p>
+
                                 <div class="row">
                                     <div class="col">
-                                        <p class="form-text">Email:</p>
+                                        <p class="form-text" id="label-newsletter-email">Email:</p>
                                     </div>
                                     <div class="col">
                                         <label>
-                                            <input type="email" class="form-control" id="newsletter-email" placeholder="Enter your email" maxlength="50" required>
+                                            <input type="email" class="form-control" id="newsletter-email" placeholder="Enter your email" maxlength="50" required aria-labelledby="label-newsletter-email">
                                         </label>
                                     </div>
                                 </div>
+
                                 <div class="row">
                                     <div class="col">
-                                        <p class="form-text">English or Greek?:</p>
+                                        <p class="form-text" id="label-language">English or Greek?:</p>
                                     </div>
-                                    <div class="col">
+                                    <div class="col" role="radiogroup" aria-labelledby="label-language">
                                         <div class="form-check">
                                             <input type="radio" class="form-check-input" id="radio1" name="lang-opt" value="English" required>
                                             <label class="form-check-label" for="radio1">English</label>
@@ -125,17 +135,19 @@
                                             <label class="form-check-label" for="radio2">Greek</label>
                                         </div>
                                     </div>
+
                                     <div class="text-center">
-                                        <button type="submit" class="btn btn-dark mt-2">Sign Up</button>
+                                        <button type="submit" class="btn btn-dark mt-2" aria-label="Sign up for newsletter">Sign Up</button>
                                     </div>
                                 </div>
-                                </form>
-                            </div>
+                            </form>
                         </div>
                     </div>
+                </div>
             </div>
         </div>
     </div>
+
 
     <!-- (2.0) Come Visit Section Header -->
     <div class="container-fluid section">

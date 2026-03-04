@@ -89,7 +89,7 @@ p {
 
 /* Banner/Navigation Bar Styling (Laptop/Desktop)*/
 .bg-img {
-    background-image: url("images/catcafe-catbanner.jpg");
+    background-image: url("./images/catcafe-catbanner.jpg");
     border: black solid 1px;
     min-height: 450px;
     background-position: center;
